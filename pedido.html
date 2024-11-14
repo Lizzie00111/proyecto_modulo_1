@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido a domicilio - Tamales Don Toño</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Playpen+Sans:wght@308&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/img/logo2.png" type="image/png"> <!-- Ruta a tu favicon -->
+</head>
+<body>
+    <header>
+        <!-- Logotipo en el encabezado -->
+        <div class="logo">
+            <img src="/img/logo2.png" alt="Logotipo de Tamales Don Toño">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="pedido.html">Pedido a domicilio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="pedido-background">
+        <div class="pedido-form">
+            <h1>Realiza tu pedido</h1>
+            <p>Selecciona tus productos y completa tu información para recibirlos a domicilio.</p>
+
+            <form id="pedidoForm">
+
+                <!--Nombre-->
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+                </div>
+
+                <!-- Fecha de pedido -->
+                <div class="form-group">
+                    <label for="fechaPedido">Fecha del pedido:</label>
+                    <input type="date" id="fechaPedido" name="fechaPedido" required>
+                </div>
+
+                <!-- Selección de producto -->
+                <div class="form-group">
+                    <label for="producto">Producto:</label>
+                    <select id="producto" name="producto" onchange="updatePrice()" required>
+                        <option value="" disabled selected>Selecciona un producto</option>
+                        <option value="20">Tamal Rojo - $20.00 MXN</option>
+                        <option value="20">Tamal Verde - $20.00 MXN</option>
+                        <option value="15">Atole de Chocolate - $15.00 MXN</option>
+                        <option value="15">Atole de Fresa - $15.00 MXN</option>
+                    </select>
+                </div>
+
+                <!-- Cantidad -->
+                <div class="form-group">
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" value="1" onchange="calculateTotal()" required>
+                </div>
+
+                <!-- Total -->
+                <div class="form-group">
+                    <label for="total">Total:</label>
+                    <input type="text" id="total" name="total" readonly>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="form-group">
+                    <button type="submit">Realizar pedido</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tamales Don Toño. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Actualizar precio según el producto seleccionado
+        function updatePrice() {
+            calculateTotal();
+        }
+
+        // Calcular el total
+        function calculateTotal() {
+            const precio = parseFloat(document.getElementById("producto").value) || 0;
+            const cantidad = parseInt(document.getElementById("cantidad").value) || 0;
+            const total = precio * cantidad;
+            document.getElementById("total").value = `$${total.toFixed(2)} MXN`;
+        }
+    </script>
+</body>
+</html>

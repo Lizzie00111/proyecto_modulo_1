@@ -1,0 +1,366 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f3d2e;
+    color: white;
+    padding: 15px 20px; /* Ajusta el espacio para el logo y el menú */
+}
+
+
+/* Estilos para el logo */
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 100px; /* Ajusta el tamaño del logo */
+    margin-right: 10px; /* Espacio entre el logo y el texto (si es necesario) */
+}
+
+header nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Estilos para el carrusel de fondo */
+.hero {
+    height: 81.3vh; /* Abarca toda la altura de la página */
+    background-size: cover;
+    background-position: center;
+    animation: slideShow 15s infinite; /* Anima el fondo con las imágenes */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    font-size: 6rem;
+    color: white; /* Color del texto */
+    text-shadow: 
+        -1px -1px 0 black, /* Sombra superior izquierda */
+        1px -1px 0 black,  /* Sombra superior derecha */
+        -1px 1px 0 black,  /* Sombra inferior izquierda */
+        1px 1px 0 black;   /* Sombra inferior derecha */
+}
+
+.hero p {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+button a {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #A19D21;
+    padding: 30px 50px;
+    border-radius: 5px;
+    color: #0f3d2e;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block; /* Asegura que los márgenes afecten correctamente */
+}
+
+button a:hover {
+    background-color: #FFBD59;
+}
+
+footer {
+    text-align: center;
+    background-color: #0f3d2e;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Animación para el carrusel de imágenes */
+@keyframes slideShow {
+    0% {
+        background-image: url('https://media.istockphoto.com/id/184327265/es/foto/tamal.jpg?s=612x612&w=0&k=20&c=PjKpFmW0rB1XtGvUqB9rJ4Qmo1-46nfYQEHK-AbL1NU=');
+    }
+    33% {
+        background-image: url('https://peopleenespanol.com/thmb/_Ljzy67-tSjhM3TuDVJ3lsdp1_E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tamales-de-rajas-con-salsa-verde-y-queso-2000-a46c8c34e885409185afee46239d001f.jpg');
+    }
+    66% {
+        background-image: url('https://mejorconsalud.as.com/wp-content/uploads/2018/03/Receta-de-tamales-caseros.jpg');
+    }
+    100% {
+        background-image: url('https://www.gob.mx/cms/uploads/article/main_image/27157/champurrado1.jpg');
+    }
+}
+
+/* Sección ¿Quiénes somos? */
+.about {
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) /* Agrega una capa semitransparente sobre la imagen */ ,url('https://st4.depositphotos.com/15238356/30014/i/950/depositphotos_300142746-stock-photo-mexican-tamales-corn-leaves-green.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 30vh; /* Ocupa toda la altura de la ventana */
+    margin: 0; /* Elimina márgenes externos */
+    display: flex; /* Centra el contenido */
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    
+}
+
+
+.about h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.5rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Sección Misión */
+.mission {
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2))/* Agrega una capa semitransparente sobre la imagen */, url('https://img.freepik.com/fotos-premium/fotografia-aerea-persona-que-prepara-tamales-hondurenos_198067-157351.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 26.7vh;
+}
+
+.mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.mission p {
+    font-size: 1.5rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #0f3d2e;
+    color: white;
+    padding: 20px 0;
+}
+
+
+/* Hero Section */
+.hero-products {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0f3d2e;
+    color: white;
+}
+
+.hero-products h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-products p {
+    font-size: 1.5rem;
+}
+
+/* Categorías */
+.categories {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.category-btn {
+    background-color: #A19D21;
+    color: #f4f4f4;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #ddb63e;
+}
+
+/* Productos */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #0f3d2e;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo del formulario de pedido */
+/* Sección de pedido con fondo */
+.pedido-background {
+    background-image: url('https://elfinanciero.com.mx/resizer/v2/MBEL67H3VNBFHPZTBGUHBH554M.jpeg?smart=true&auth=3e82e52b8739621b4cd2d6833d46de8e1c9289cb2d93c0e2739058c6a2ddf664&width=1280&height=720'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    padding: 50px 0; /* Espaciado interno */
+    height: 75.3vh
+}
+
+.pedido-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.pedido-form h1 {
+    font-family: "Anton", sans-serif;
+    color: #0f3d2e;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.pedido-form p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #0f3d2e;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #0f3d2e;
+    outline: none;
+    box-shadow: 0 0 5px rgba(15, 61, 46, 0.5);
+}
+
+.form-group button {
+    background-color: #f7c948;
+    color: #0f3d2e;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #ddb63e;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .pedido-form {
+        padding: 15px;
+    }
+
+    .pedido-form h1 {
+        font-size: 2rem;
+    }
+}
